@@ -7,7 +7,17 @@ public class RockPaperScissors {
 		Scanner reader = new Scanner(System.in);
 		
 		System.out.println("Please input 'Rock', 'Paper', or 'Scissors'");
-		String userMove = reader.next();
+		boolean correctInput = false;
+		String userMove = "";
+		while(!correctInput) {
+			try {
+				userMove = getUserMove(reader.next());
+				correctInput = true;
+			}
+			catch(Exception e) {
+				System.out.println("Oops, you need to input 'Rock', 'Paper', or 'Scissors'");
+			}
+		}		 
 		
 		String computerMove = getComputerMove();
 		System.out.println("You played: " + userMove + ". And I played " + computerMove + ".");
@@ -23,6 +33,13 @@ public class RockPaperScissors {
 		reader.close();
 	}
 		
+	private static String getUserMove(String userMove) {
+		if(!(userMove.equals("Rock") || userMove.equals("Paper") || userMove.equals("Scissors"))) {
+			throw new IllegalArgumentException();
+		}
+		return userMove;
+	}
+
 	private static String getComputerMove() {
 		Random generator = new Random(); 
 		int play = generator.nextInt(3);
