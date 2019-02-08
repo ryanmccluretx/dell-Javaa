@@ -15,10 +15,12 @@ public class CarLot {
 		vehicles = new ArrayList<Vehicle>();
 	}
 	
+	//Add a Vehicle to the lot
 	public void addVehicle(Vehicle vehicle) {
 		vehicles.add(vehicle);
 	}
 	
+	//Print the CarLot inventory
 	public void printInventory() {
 		System.out.println("The " + this.name + " has the following vehicles parked in it:");
 		for(int i = 0; i < vehicles.size(); i++) {

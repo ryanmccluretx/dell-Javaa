@@ -11,6 +11,7 @@ public class Truck extends Vehicle {
 		this.bedSize = bedSize;
 	}
 	
+	//Print Vehicle description
 	public void printDescription() {
 		System.out.println("This beautiful " + this.make + " " + this.model 
 				+ ", with license plate " + this.license + " has a bed size of " 

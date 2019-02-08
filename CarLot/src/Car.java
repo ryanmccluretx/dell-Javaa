@@ -13,6 +13,7 @@ public class Car extends Vehicle {
 		this.numDoors = numDoors;		
 	}
 	
+	//Print Car Description
 	public void printDescription() {
 		System.out.println("This beautiful " + this.type + ", the " + this.make + " " 
 				+ this.model + ", with license plate " 

@@ -5,5 +5,6 @@ public abstract class Vehicle {
 	String model;
 	String price;
 	
+	//Print Vehicle Description
 	public void printDescription() {}
 }
