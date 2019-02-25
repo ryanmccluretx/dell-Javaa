@@ -4,7 +4,7 @@ public class Statistics {
 	
 	private static int min;
 	private static int max;
-	private static int avg;
+	private static double avg;
 	private static int sum;
 	private static int numElem;
 	
@@ -67,7 +67,7 @@ public class Statistics {
 		return max;
 	}
 
-	public static int getAvg() {
+	public static double getAvg() {
 		int sum = getSum();
 		avg = sum/numbers.length;
 		return avg;
