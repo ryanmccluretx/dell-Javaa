@@ -5,7 +5,9 @@ public class Dao {
 	
 	
 	public void Update(int id) {		
-		toDoItems.get(id).setCompleted(true);
+		ToDoItem updateItem = toDoItems.get(id);
+		updateItem.setCompleted(true);
+		toDoItems.set(id,  updateItem);
 	}
 	
 	public void Add(ToDoItem item) {
