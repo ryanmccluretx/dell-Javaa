@@ -48,13 +48,13 @@ public class Controller {
 			dataAccess.Delete(s.nextInt());
 		}
 		else if(userCommand.contains("complete")) {
-			String[] commandArr = userCommand.split("complete");
+			String[] commandArr = userCommand.split("complete ");
 			dataAccess.Update(Integer.parseInt(commandArr[1]));
 		}
 		else if(userCommand.contains("list all")) {
 			dataAccess.List();
 		}
-		else if(userCommand.contains("list completed")) {
+		else if(userCommand.contains("list done")) {
 			dataAccess.ListState(true);
 		}
 		else if(userCommand.contains("list pending")) {
@@ -62,16 +62,22 @@ public class Controller {
 		}
 		else if(userCommand.contains("stop")) {
 			appActive = false;
-		}
-		
+		}		
 	}
 
 	public static void printDirections() {
+		System.out.println();
+
 		System.out.println("To add more ToDo Items, type 'Add'");
 		System.out.println("To mark items complete, type 'Complete X', where X is the ID of the completed item");
-		System.out.println("To view a list of your items type 'List All' or 'List Pending' or 'List Completed'");
+		System.out.println("To view a list of your items type 'List All' or 'List Pending' or 'List Done'");
 		System.out.println("To delete ToDo Items, type 'Delete X', where X is the ID of the item to delete");
 		System.out.println("If you're done #DoingThings, type 'STOP'");
+		System.out.println();
+
 		System.out.println("What would you like to do?");
+		
+		System.out.println();
+
 	}
 }

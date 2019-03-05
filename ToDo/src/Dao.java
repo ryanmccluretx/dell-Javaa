@@ -37,6 +37,6 @@ public class Dao {
 	}
 	
 	private void printItemStatus(ToDoItem itm) {
-		System.out.println("ToDo Item " + itm.getId() + ": " + itm.getDescription() + (itm.isCompleted() ? "COMPLETED." : "IN-PROGRESS."));
+		System.out.println("ToDo Item " + itm.getId() + ": " + itm.getDescription() + " " + (itm.isCompleted() ? "COMPLETED." : "IN-PROGRESS."));
 	}
 }
